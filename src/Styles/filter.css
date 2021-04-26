@@ -1,0 +1,151 @@
+.filter-mobile-box {
+  width: 100%;
+  box-shadow: 0 2px 4px darkgray;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-mobile-box h6 {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.filter-icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-box {
+  width: 100%;
+  box-shadow: 0 2px 4px darkgray;
+  top: 70px;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
+
+.filterNavbar {
+  background-color: #ce0505;
+}
+
+.filterContainer .loginButton {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.filterContainer .signupButton {
+  margin-left: 10px;
+  padding: 10px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-radius: 5px;
+}
+
+.filter-logo-box {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #ce0505;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.filter-body-box {
+  position: relative;
+}
+
+.option-box {
+  margin-top: 20px;
+  box-shadow: 0 2px 4px darkgray;
+}
+
+.option-box:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 12px darkgray;
+}
+
+.option-img-title-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.option-img-box {
+  width: 130px;
+  height: 130px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25%;
+}
+
+.display1 {
+  display: none;
+}
+
+.display2 {
+  display: block;
+}
+
+.pagination-box {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-box div {
+  color: #8c96ab;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #8c96ab;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-box div:hover,
+div.active {
+  background-color: #8c96ab;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .option-img-title-box {
+    justify-content: flex-start;
+  }
+  .option-img-box {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .filter-mobile-box {
+    display: none;
+  }
+  .filter-box {
+    position: relative;
+    top: 0px;
+  }
+  .option-box {
+    margin-top: 0px;
+  }
+  .display1 {
+    display: block;
+  }
+}

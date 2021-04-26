@@ -1,0 +1,250 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.bg-box {
+  height: 480px;
+  background-image: url("../Assets/wallpaper.png");
+  background-position: 35%;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: soft-light;
+}
+
+.cusNavbar {
+  display: none;
+}
+
+.cusNavbar .col {
+  text-align: right;
+}
+
+.cusNavbar .col .loginButton {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.cusNavbar .col .signupButton {
+  margin-left: 10px;
+  padding: 10px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-radius: 5px;
+}
+
+.logo-title-box {
+  height: 100%;
+}
+.logo-title-box .col {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  height: 100%;
+  color: white;
+}
+.logo-title-box .col .logo-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #eb2929;
+  font-weight: bold;
+}
+.logo-title-box .title-box {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.logo-title-box .location-search-box {
+  width: 100%;
+}
+.location-box select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  padding-left: 10px;
+  /* color: #8c96ab; */
+}
+.search-box {
+  display: flex;
+  position: relative;
+}
+.search-icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-input-box {
+  flex: 1;
+}
+.search-box input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 14px;
+  color: #8c96ab;
+  outline: none;
+}
+
+.suggestionsBox {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 54px;
+  color: #192f60;
+}
+
+.suggestion {
+  background-color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 6px 12px darkgrey;
+  cursor: pointer;
+}
+
+.suggestion-img-box {
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.suggestion-text-box {
+  padding-left: 10px;
+}
+
+.body-title {
+  color: #192f60;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.body-box h6 {
+  color: #8c96ab;
+}
+.tiles a {
+  text-decoration: none;
+}
+.tile-box {
+  height: 100px;
+  box-shadow: 0 2px 4px darkgray;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tile-box:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 12px darkgray;
+}
+.tile-img {
+  height: inherit;
+  min-width: 100px;
+  background-position: center;
+  background-size: cover;
+}
+.tile-text {
+  padding: 15px;
+}
+.tile-text h4 {
+  font-weight: bold;
+  color: #192f60;
+  font-size: 1rem;
+}
+.tile-text p {
+  font-size: 0.8rem;
+  color: #8c96ab;
+}
+
+@media (min-width: 576px) {
+  .tile-box {
+    height: 130px;
+  }
+  .tile-img {
+    min-width: 130px;
+  }
+  .tile-text h4 {
+    font-size: 1.2rem;
+  }
+  .tile-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-box {
+    background-image: url("../Assets/wallpaper2x.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .logo-title-box .col .title-box {
+    font-size: 2rem;
+  }
+  .logo-title-box .location-search-box {
+    width: 80%;
+  }
+  .body-box .body-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-box {
+    background-image: url("../Assets/wallpaper3x.png");
+  }
+  .cusNavbar {
+    display: block;
+  }
+  .logo-title-box {
+    height: 416px;
+  }
+  .logo-title-box .title-box {
+    font-size: 2.2rem;
+  }
+  .logo-title-box .location-search-box {
+    width: 64%;
+  }
+  .body-box .body-title {
+    font-size: 2.1rem;
+  }
+  .tile-text {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-title-box .location-search-box {
+    width: 55%;
+  }
+  .tile-box {
+    height: 160px;
+  }
+  .tile-img {
+    min-width: 160px;
+  }
+  .tile-text h4 {
+    font-size: 1.5rem;
+  }
+  .tile-text p {
+    font-size: 1.1rem;
+  }
+}

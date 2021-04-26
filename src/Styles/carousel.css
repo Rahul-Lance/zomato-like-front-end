@@ -1,0 +1,43 @@
+.slide div {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.gallery {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #192f60;
+  font-weight: bold;
+  opacity: 0.81;
+}
+.control-dots {
+  display: none;
+}
+.thumbs-wrapper {
+  display: none;
+}
+.carousel-status {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    right: 40px;
+    bottom: 30px;
+  }
+  .slide div {
+    height: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide div {
+    height: 400px;
+  }
+}
