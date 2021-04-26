@@ -32,7 +32,7 @@ class cusModal extends Component {
     console.log(req);
     axios({
       method:'POST',
-      url:'http://localhost:4050/api/userSignUp',
+      url:'https://murmuring-lake-96771.herokuapp.com/api/userSignUp',
       headers: {'Content-Type':'application/json'},
       data: req
     }).then(result => {
@@ -53,7 +53,7 @@ class cusModal extends Component {
     }
     axios({
       method:'POST',
-      url:'http://localhost:4050/api/userLogin',
+      url:'https://murmuring-lake-96771.herokuapp.com/api/userLogin',
       headers: {'Content-Type':'application/json'},
       data: req
     }).then(result => {

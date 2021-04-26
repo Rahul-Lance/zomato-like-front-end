@@ -22,7 +22,7 @@ class Wallpaper extends Component {
 
   handleChange = (event) => {
     const city_name = event.target.selectedOptions[0].value;
-    axios.get(`http://localhost:4050/api/getRestaurantsByLocation/${city_name}`)
+    axios.get(`https://murmuring-lake-96771.herokuapp.com/api/getRestaurantsByLocation/${city_name}`)
     .then(result => {
       // console.log(result.data.restaurants);
       this.setState({

@@ -57,7 +57,7 @@ class filter extends Component {
     console.log(req);
     axios({
       method: 'POST',
-      url: 'http://localhost:4050/api/getFilteredRestaurants',
+      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -92,7 +92,7 @@ class filter extends Component {
     }
     axios({
       method: 'POST',
-      url: 'http://localhost:4050/api/getFilteredRestaurants',
+      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -130,7 +130,7 @@ class filter extends Component {
     console.log(req);
     axios({
       method: 'POST',
-      url: 'http://localhost:4050/api/getFilteredRestaurants',
+      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -148,7 +148,7 @@ class filter extends Component {
       console.log(error);
     });
 
-    axios.get('http://localhost:4050/api/getAllRestaurants').then(result => {
+    axios.get('https://murmuring-lake-96771.herokuapp.com/api/getAllRestaurants').then(result => {
       this.setState({
         allRestaurants : result.data.restaurants,
       })

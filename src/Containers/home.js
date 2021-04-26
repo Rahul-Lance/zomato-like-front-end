@@ -14,14 +14,14 @@ class home extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('http://localhost:4050/api/getLocations').then(result => {
+    axios.get('https://murmuring-lake-96771.herokuapp.com/api/getLocations').then(result => {
       this.setState({
         cities : result.data.locations
       })
     }).catch(err => {
       console.log(err);
     });
-    axios.get('http://localhost:4050/api/getMealTypes').then(result => {
+    axios.get('https://murmuring-lake-96771.herokuapp.com/api/getMealTypes').then(result => {
       this.setState({
         mealtypes : result.data.mealTypes
       })

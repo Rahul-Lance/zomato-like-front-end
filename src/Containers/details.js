@@ -17,7 +17,7 @@ class details extends Component {
   componentDidMount = () => {
     const qs = queryString.parse(this.props.location.search);
     const {restaurant_id} = qs;
-    axios.get(`http://localhost:4050/api/getRestaurantsById/${restaurant_id}`).then(result => {
+    axios.get(`https://murmuring-lake-96771.herokuapp.com/api/getRestaurantsById/${restaurant_id}`).then(result => {
       this.setState({
         restaurantDetails : result.data.restaurant[0]
       })
