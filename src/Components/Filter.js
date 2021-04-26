@@ -120,6 +120,7 @@ class Filter extends Component {
 
   filterHandler = () => {
     this.props.updateFilteredData(this.state.filterData);
+    this.handleDropDown();
   }
 
   handleDropDown = () => {
@@ -137,7 +138,7 @@ class Filter extends Component {
     const {allRestaurants} = this.props;
     return (
       <div className="col-12 col-lg-3">
-        <div className="filter-mobile-box py-2" onClick={() => this.handleDropDown()}>
+        <div className="filter-mobile-box py-2" onClick={this.handleDropDown}>
           <h6 className="px-3">Filters / Sort</h6>
           <div className="filter-icon-box">
             <img src={down} alt="icon" />
