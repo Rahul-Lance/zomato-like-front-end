@@ -4,6 +4,8 @@ import '../Styles/filter.css';
 import axios from 'axios';
 import queryString from 'query-string';
 
+import Link from '../paths';
+
 import CusNavbar from '../Components/cusNavbar';
 import Filter from '../Components/Filter';
 import FilterResults from '../Components/FilterResults';
@@ -41,7 +43,7 @@ class filter extends Component {
   }
 
   updateFilteredData = (data) => {
-    let {mealtype,page,location} = this.state.filterData;
+    let {mealtype,location} = this.state.filterData;
     if(data.location!==undefined) {
       location = data.location;
     }
@@ -52,12 +54,12 @@ class filter extends Component {
       hcost: data.hcost,
       lcost: data.lcost,
       sort: data.sort,
-      page: page
+      page: 1
     }
     console.log(req);
     axios({
       method: 'POST',
-      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
+      url: `${Link}/getFilteredRestaurants`,
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -71,7 +73,7 @@ class filter extends Component {
           hcost: data.hcost,
           lcost: data.lcost,
           sort: data.sort,
-          page: page
+          page: 1
         }
       })
     }).catch(error => {
@@ -92,7 +94,7 @@ class filter extends Component {
     }
     axios({
       method: 'POST',
-      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
+      url: `${Link}/getFilteredRestaurants`,
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -127,10 +129,10 @@ class filter extends Component {
       cuisine: cuisine,
       page:page
     }
-    console.log(req);
+    // console.log(req);
     axios({
       method: 'POST',
-      url: 'https://murmuring-lake-96771.herokuapp.com/api/getFilteredRestaurants',
+      url: `${Link}/getFilteredRestaurants`,
       headers: {'Content-type': 'application/json'},
       data: req
     }).then(response => {
@@ -148,7 +150,7 @@ class filter extends Component {
       console.log(error);
     });
 
-    axios.get('https://murmuring-lake-96771.herokuapp.com/api/getAllRestaurants').then(result => {
+    axios.get(`${Link}/getAllRestaurants`).then(result => {
       this.setState({
         allRestaurants : result.data.restaurants,
       })

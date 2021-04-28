@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import '../Styles/modal.css';
 
+import Link from "../paths";
+
 import axios from 'axios';
 
 class cusModal extends Component {
@@ -32,7 +34,7 @@ class cusModal extends Component {
     console.log(req);
     axios({
       method:'POST',
-      url:'https://murmuring-lake-96771.herokuapp.com/api/userSignUp',
+      url:`${Link}/userSignUp`,
       headers: {'Content-Type':'application/json'},
       data: req
     }).then(result => {
@@ -53,7 +55,7 @@ class cusModal extends Component {
     }
     axios({
       method:'POST',
-      url:'https://murmuring-lake-96771.herokuapp.com/api/userLogin',
+      url:`${Link}/userLogin`,
       headers: {'Content-Type':'application/json'},
       data: req
     }).then(result => {

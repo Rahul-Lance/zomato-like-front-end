@@ -7,6 +7,18 @@ class FilterResults extends Component {
     this.props.history.push(`/details?restaurant_id=${item._id}`);
   }
 
+  leftPagination = () => {
+    if(this.props.page>this.props.noOfPages[0]) {
+      this.props.update(this.props.page-1);
+    }
+  }
+
+  rightPagination = () => {
+    if(this.props.page<this.props.noOfPages.length) {
+      this.props.update(this.props.page+1);
+    }
+  }
+
   render() {
     const {restaurantList, page, noOfPages, update} = this.props; 
     let items = [];
@@ -61,9 +73,9 @@ class FilterResults extends Component {
         }
         
         <div className="pagination-box">
-          <div>&#9666;</div>
+          <div onClick={this.leftPagination}>&#9666;</div>
           {items}
-          <div>&#9656;</div>
+          <div onClick={this.rightPagination}>&#9656;</div>
         </div>
       </div>
     )

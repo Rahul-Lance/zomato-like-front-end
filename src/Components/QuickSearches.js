@@ -22,16 +22,16 @@ class QuickSearches extends Component {
           <div className="row tiles mb-3">
             {
               mealtypes.sort((a,b) => a.meal_type > b.meal_type ? 1 : -1).map((item,index) => {
-                const imgPath = require('../'+item.image).default;
-                return <div onClick={() => {this.handleClick(item)}} key={index} className="col-12 col-md-6 col-lg-4">
-                          <div className="tile-box">
-                            <div className="tile-img" style={{backgroundImage:`url(${imgPath})`}}></div>
-                            <div className="tile-text">
-                              <h4>{item.name}</h4>
-                              <p>{item.content}</p>
-                            </div>
-                          </div>
-                      </div>
+              const imgPath = require('../'+item.image).default;
+              return <div onClick={() => {this.handleClick(item)}} key={index} className="col-12 col-md-6 col-lg-4">
+                  <div className="tile-box">
+                    <div className="tile-img" style={{backgroundImage:`url(${imgPath})`}}></div>
+                    <div className="tile-text">
+                      <h4>{item.name}</h4>
+                      <p>{item.content}</p>
+                    </div>
+                  </div>
+              </div>
               })
             } 
           </div>
