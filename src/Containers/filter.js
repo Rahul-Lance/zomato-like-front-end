@@ -56,7 +56,7 @@ class filter extends Component {
       sort: data.sort,
       page: 1
     }
-    console.log(req);
+    // console.log(req);
     axios({
       method: 'POST',
       url: `${Link}/getFilteredRestaurants`,
